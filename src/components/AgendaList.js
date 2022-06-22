@@ -26,11 +26,6 @@ function AgendaList() {
      
 
     })
-    // const download = () => {
-    //   axios.get('http://localhost:8001/download').then((res, req) => {
-    //     console.log(res);
-    //   })
-    // }
   }
   const download = (e) => {
     e.preventDefault();
@@ -49,21 +44,11 @@ function AgendaList() {
           <ListGroupItem  className='d-flex justify-content-between align-items-center p-3'>
           <p className='agenda-name'>{agenda.title}</p>
           <div className='control-icon ml-auto'>
-        
               <Link to={`/edit/${agenda._id}`} className='btn btn-warning submit-btn'>Edit <EditIcon/></Link>
               <button class="btn btn-danger" onClick={() => deleteAgenda(agenda._id)}>Delete <DeleteIcon/></button>
           </div>
       </ListGroupItem>
         ))}
-        {/* <form method='post' onSubmit={onSubmit}>
-          <div className='cloud-operation'>
-            <input type="file" class="btn btn-success submit-btn" onChange={onInputChange}/>
-            <button type="file" class="btn btn-success submit-btn upload-btn">Upload <FileUploadIcon/></button>
-            <button type="button" class="btn btn-info" onClick={(e) => download(e)}>Download <FileDownloadIcon/></button>
-
-          </div>
-        </form> */}
-       
     </ListGroup>
   )
 }

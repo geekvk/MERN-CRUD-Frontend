@@ -33,11 +33,8 @@ function AddAgenda() {
             <ErrorMessage name='title' component="p" className='text-danger'/>
             <button type="submit" class="btn btn-primary submit-btn">Save <SaveIcon/></button>
             <Link to='/' className='btn btn-danger'>Cancel <CancelPresentationIcon/></Link>
-
           </Form>
         )}
-
-      
       </Formik>
   
     </div>
