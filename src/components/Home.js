@@ -19,14 +19,7 @@ function Home() {
     data.append('file', files);
     axios.post('http://localhost:8001/agendas/upload', data).then((req, res) => {
       console.log(res);
-     
-
-    })
-    // const download = () => {
-    //   axios.get('http://localhost:8001/download').then((res, req) => {
-    //     console.log(res);
-    //   })
-    // }
+    });
   }
   const download = (e) => {
     e.preventDefault();
@@ -48,7 +41,6 @@ function Home() {
               <input type="file" class="btn btn-success submit-btn" onChange={onInputChange}/>
               <button type="file" class="btn btn-success submit-btn upload-btn">Upload <FileUploadIcon/></button>
               <button type="button" class="btn btn-info" onClick={(e) => download(e)}>Download <FileDownloadIcon/></button>
-
             </div>
         </form>
       </div>
