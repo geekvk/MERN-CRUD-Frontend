@@ -9,7 +9,7 @@ function Header() {
             <NavbarBrand href='/'>Agenda List</NavbarBrand>
             <Nav>
                 <NavItem>
-                    <Link class="btn btn-primary" to='/add'><AddIcon/></Link>
+                    <Link class="btn btn-primary" to='/add'>Add <AddIcon/></Link>
                 </NavItem>
             </Nav>
         </Container>

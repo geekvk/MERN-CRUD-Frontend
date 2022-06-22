@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { getAgendasR, createAgendaR, deleteAgendaR, editAgendaR, getAgendaByIDR } from "../api/api";
+import { getAgendasR, createAgendaR, deleteAgendaR, editAgendaR, getAgendaByIDR, exportAgendaR } from "../api/api";
 
 const StateContext = createContext();
 
@@ -35,6 +35,10 @@ export const StateProvider = ({ children }) => {
         const res = await editAgendaR(id, updatedAgenda);
         setAgendas(agendas.map((agenda) => agenda._id === id ? res.data : agenda ));
     }
+    const uploadFile = async(filename) => {
+        const res = await exportAgendaR(filename);
+        console.log(res);
+    }
     useEffect(() => {
         getAgenda();
       }, []);
@@ -48,7 +52,8 @@ export const StateProvider = ({ children }) => {
         createAgenda,
         deleteAgenda,
         editAgenda,
-        getAgendaByID
+        getAgendaByID,
+        uploadFile
         
         }}>
         {children}

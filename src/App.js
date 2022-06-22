@@ -16,7 +16,7 @@ function App() {
             <Route path='/add' element={<AddAgenda/>}/>
             <Route path='/edit/:id' element={<EditAgenda/>}/>
           </Routes>
-        </Router>
+        </Router> 
       </StateProvider>
     </div>
   );
