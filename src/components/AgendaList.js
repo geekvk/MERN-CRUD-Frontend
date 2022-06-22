@@ -23,8 +23,6 @@ function AgendaList() {
     data.append('file', files);
     axios.post('http://localhost:8001/agendas/upload', data).then((req, res) => {
       console.log(res);
-     
-
     })
   }
   const download = (e) => {
