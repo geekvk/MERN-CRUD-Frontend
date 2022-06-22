@@ -31,8 +31,8 @@ function AddAgenda() {
             <label>Add New Agenda</label>
             <Field name='title' placeholder='Title' className="text-feild"/>
             <ErrorMessage name='title' component="p" className='text-danger'/>
-            <button type="submit" class="btn btn-primary submit-btn"><SaveIcon/></button>
-            <Link to='/' className='btn btn-danger'><CancelPresentationIcon/></Link>
+            <button type="submit" class="btn btn-primary submit-btn">Save <SaveIcon/></button>
+            <Link to='/' className='btn btn-danger'>Cancel <CancelPresentationIcon/></Link>
 
           </Form>
         )}

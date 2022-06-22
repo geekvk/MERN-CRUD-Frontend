@@ -5,3 +5,4 @@ export const createAgendaR = async(agenda) => await axios.post('/agendas/add', a
 export const deleteAgendaR = async(id) => await axios.delete('/agendas/delete/' + id);
 export const getAgendaByIDR = async(id) => await axios.get('/agendas/' + id);
 export const editAgendaR = async(id, updateAgenda) => await axios.put(`/agendas/update/${id}`, updateAgenda);
+export const exportAgendaR = async(filename) => await axios.post('/agendas/upload', filename);

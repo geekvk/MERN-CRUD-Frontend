@@ -18,3 +18,14 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+.cloud-operation{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.agenda-list{
+  overflow-y: scroll;
+  max-height: 600px;
+  width: 100%;
+}
